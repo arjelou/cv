@@ -1,37 +1,23 @@
-import React from 'react';
+import {Routes, Route} from 'react-router-dom';
+import Index from './pages/index';
+import About from './component/about';
+import Contact from './component/contact';
+import Skills from './component/skills';
+import Projects from './component/projects';
 import './global.css';
-import Navbar from './component/navbar';
-import { BsGithub,BsArrowRight,BsPersonCircle } from "react-icons/bs";
 
-
-export default class App extends React.Component {
-render() {
+export default function App() {
   return (
   <>
-    <div className='container'>
-      <div>
-        <section className=''>
-         <Navbar />
-        </section>
-      </div>
-      <div>
-        <section className='content'>
-          <BsPersonCircle size={170} color='blue'/>
-          <h2>Arjelou Carampatana</h2>
-        <p>Web Developer</p>
-        <button>Connect <BsArrowRight size={20} /></button><br />
-        <BsGithub />
-        </section>
-      </div>
-      <div>
-      <div className='gap-3 d-flex justify-content-start'>
-        <p>Contact</p>
-         <p>About</p>
-         <p>Skills</p>
-       </div>
-      </div>
-    </div>
+    <Routes>
+      <Route path='' element={<Index />}>
+        <Route path='/contact' element={<Contact />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/skills' element={<Skills />} />
+        <Route path='/projects' element={<Projects />} />
+      </Route>
+      <Route path='*' element={<h1>Page not found!</h1>} />
+    </Routes>
   </>
   )
-}
 }
