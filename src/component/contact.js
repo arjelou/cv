@@ -10,7 +10,7 @@ export default function contact() {
           <BsEnvelopeFill size={30} color=''/> arjelou.jelou@gmail.com
         </section> 
         <section className="contact__section text-center">
-          <BsFillTelephoneFill size={30} color=''/> arjelou.jelou@gmail.com
+          <BsFillTelephoneFill size={30} color=''/> (+63) 955 770 2531
         </section>  
       </div>
     </>
