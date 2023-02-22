@@ -2,6 +2,7 @@ import React from 'react';
 import './global.css';
 import Navbar from './component/navbar';
 import { BsGithub,BsArrowRight,BsPersonCircle } from "react-icons/bs";
+import { NavLink } from 'react-router-dom';
 
 
 export default class App extends React.Component {
@@ -25,6 +26,7 @@ render() {
       </div>
       <div>
       <div className='gap-3 d-flex justify-content-start'>
+     <NavLink></NavLink>
         <p>Contact</p>
          <p>About</p>
          <p>Skills</p>
