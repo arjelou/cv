@@ -1,44 +1,33 @@
 import React from 'react';
 import '../global.css';
 import { NavLink } from 'react-router-dom';
-import Navbar from '../component/navbar';
-import { BsGithub,BsArrowRight,BsPersonCircle } from "react-icons/bs";
 import { Outlet } from 'react-router-dom';
+import avatar from '../assets/avatar.png';
 
 
 export default class index extends React.Component {
 render() {
   return (
-  <>
-    <div className='container'>
-      <div>
-        <section className=''>
-         <Navbar />
-        </section>
-      </div>
-      <div>
-        <section className='content'>
-          <BsPersonCircle size={170} color='blue'/>
-          <h2>Arjelou Carampatana</h2>
+<>
+  <div className='container'>
+      <section className='cv'>
+        <img src={avatar} alt='im_avatar' />
+        <h2>Arjelou Carampatana</h2>
         <p>Web Developer</p>
-        <button>Connect <BsArrowRight size={20} /></button><br />
-        <BsGithub />
-        </section>
-      </div>
-      <div>
-      <div className='gap-3 d-flex justify-content-start'>
-      <NavLink to='/contact'>Contact</NavLink>
-      <NavLink to='/about'>About</NavLink>
-      <NavLink to='/skills'>Skills</NavLink>
-      <NavLink to='/projects'>Projects</NavLink>
-       </div>
+      </section>
+      <section className='cv_menu'>
+        <NavLink className={({isActive}) => isActive ? "cv_menu_active" : "cv_menu_inactive"} to='/contact'>Contact</NavLink>
+        <NavLink className={({isActive}) => isActive ? "cv_menu_active" : "cv_menu_inactive"} to='/about'>About</NavLink>
+        <NavLink className={({isActive}) => isActive ? "cv_menu_active" : "cv_menu_inactive"} to='/skills'>Skills</NavLink>
+        <NavLink className={({isActive}) => isActive ? "cv_menu_active" : "cv_menu_inactive"} to='/projects'>Projects</NavLink>
+      </section>
 
-       <div>
-            <Outlet />
-       </div>
+      <div>
+          <Outlet />
       </div>
-    </div>
-  </>
+  
+  </div>
+</>
   )
 }
 }

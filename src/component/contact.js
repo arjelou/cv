@@ -1,17 +1,18 @@
 import React from 'react';
-import { BsEnvelopeFill, BsFillTelephoneFill } from "react-icons/bs";
-
+import '../global.css';
 
 export default function contact() {
   return (
     <>
-      <div className=''>
-        <section className="contact__section text-center">
-          <BsEnvelopeFill size={30} color=''/> arjelou.jelou@gmail.com
-        </section> 
-        <section className="contact__section text-center">
-          <BsFillTelephoneFill size={30} color=''/> (+63) 955 770 2531
-        </section>  
+      <div className="container">
+        <section className='cv_contact'>
+          <article>
+            <p>arjelou.jelou@gmail.com</p>
+          </article>
+          <article>
+            <p>(+63) 955 770 2531</p>
+          </article>
+        </section>
       </div>
     </>
   )
