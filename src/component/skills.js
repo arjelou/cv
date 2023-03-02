@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import '../global.css';
 
 export default function skills() {
   return (
@@ -7,21 +8,29 @@ export default function skills() {
   <section className='cv_contact'>
     <article>
       <h4>Programming Languages</h4>
-      <p>HTM</p>
-      <p>CSS3</p>
-      <p>JavaScript</p>
-      <p>MySQL</p>
+      <ul>
+        <li>HTM</li>
+        <li>CSS3</li>
+        <li>JavaScript</li>
+        <li>MySQL</li>
+      </ul>
     </article>
     <article>
       <h4>Libraries / Frameworks</h4>
-      <p>Node.JS</p>
-      <p>React.JS</p>
-      <p>Express.JS</p>
+      <ul>
+        <li>Node.JS</li>
+        <li>React.JS</li>
+        <li>Express.JS</li>
+        <li>Bootstrap 5</li>
+      </ul>
     </article>
     <article>
       <h4>Tools</h4>
-      <p>Photoshop</p>
-      <p>Figma</p>
+      <ul>
+        <li>Photoshop</li>
+        <li>Figma</li>
+        <li>Canva</li>
+      </ul>
     </article>
   </section>
 </div>

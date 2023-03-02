@@ -33,6 +33,8 @@
     text-align: center;
     grid-column: 2 / 6;
     grid-row: 3;
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 .cv p{
     text-align: center;
@@ -43,13 +45,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: 600;
     gap: 1rem;
 }
 .cv_menu_active{
     text-decoration: none;
     font-size: 1.1rem;
     color: rgb(24, 24, 67);
-    border-bottom: solid 1px red;
+    border-bottom: solid 1px rgb(24, 24, 67);
     -webkit-transition: 0.5s;
     transition: 0.5s;
 }
@@ -59,20 +62,36 @@
     color: rgb(24, 24, 67);
 }
 /* ####### contact ###### */
+.cv_contact{
+    margin-top: 1.5rem;
+    border: solid 1px rgb(24, 24, 67);;
+}
 .cv_contact article p{
-    margin-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: rgba(159, 165, 163,0.5);
     padding: 15px;
     color: black;
     font-weight: bold;
 }
 /* ####### skills ###### */
+.cv_skills{
+    margin-top: 1.5rem;
+}
+.cv_skills article{
+    display: grid;
+    grid-template-columns: .75fr .50fr;
+    grid-template-rows: (1fr, .50fr);
+}
+.cv_skills article ul{
+    list-style-type: none;
+    grid-column: span 2;
+}
+.cv_skills article h4{
+    grid-column: 1 / -1;
+}
 .cv_contact article p, .cv_contact article h4 {
-    margin-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -82,4 +101,39 @@
     color: black;
     font-weight: bold;
 }
+/* ##### cv projects ##### */
+.cv_projects{
+    margin-top: 1.5rem;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    border: solid 1px rgb(24, 24, 67);;
+    padding: .3rem;
+}
+.cv_projects h4{
+    display: flex;
+    font-weight: 700;
+    justify-content: center;
+    align-items: end;
+    background-image: url('./assets//mobile_view.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+   
+}
+.cv_projects p{
+    padding: 0.5rem;
+}
+.cv_projects article .icon{
+    margin-left: .50rem;
+    width: 20px;
+    height: 20px;
+    color: rgb(24, 24, 67);
+}
+/* ##### cv about ##### */
+.cv_about{
+    margin-top: 1.5rem;
+    border: solid 1px rgb(24, 24, 67);;
+    padding: .3rem;
+}
+
 
