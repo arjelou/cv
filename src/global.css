@@ -113,7 +113,7 @@
     display: flex;
     font-weight: 700;
     justify-content: center;
-    align-items: end;
+    align-items: flex-end;
     background-image: url('./assets//mobile_view.png');
     background-size: cover;
     background-repeat: no-repeat;

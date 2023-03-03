@@ -1,9 +1,14 @@
 import {Routes, Route} from 'react-router-dom';
-import Index from './pages/index';
+import Index from './pages/home';
 import About from './component/about';
 import Contact from './component/contact';
 import Skills from './component/skills';
 import Projects from './component/projects';
+import Language from './component/language';
+import Framework from './component/framework';
+import Tools from './component/tools';
+
+
 import './global.css';
 
 export default function App() {
@@ -15,6 +20,9 @@ export default function App() {
         <Route path='/about' element={<About />} />
         <Route path='/skills' element={<Skills />} />
         <Route path='/projects' element={<Projects />} />
+        <Route path='/language' element={<Language />} />
+        <Route path='/framework' element={<Framework />} />
+        <Route path='/tools' element={<Tools />} />
       </Route>
       <Route path='*' element={<h1>Page not found!</h1>} />
     </Routes>
