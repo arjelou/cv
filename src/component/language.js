@@ -9,8 +9,8 @@ export default class language extends React.Component{
               <ul>
                 <li>HTM</li>
                 <li>CSS3</li>
-                <li>JavaScrilit</li>
-                <li>MySQL</li>
+                <li>JavaScript</li>
+                <li>ORM/MySQL</li>
               </ul>
             </article>
           </section>
