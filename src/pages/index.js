@@ -53,9 +53,11 @@ export default class index extends React.Component {
             </ul>
             <h3>B2B eCommerce</h3>
             <p>
-            As a career shifter from IT Support to web development, I am determined
-            to develop my skills further and use my technical knowledge to create innovative web applications. My goal is to be a va
-            luable development team member and continuously learn and grow as a web developer.
+            Web app built with React,
+            Node, Express, and MySQL for
+            the manufacturing of
+            garments that serve other
+            companies' needs.
             </p>
             <div className='btn_link'>
             <a href='https://ecommerce-arjelou.vercel.app/'>Demo</a>
@@ -72,13 +74,15 @@ export default class index extends React.Component {
             </ul>
             <h3>B2B eCommerce Back End</h3>
             <p>
-            As a career shifter from IT Support to web development, I am determined
-            to develop my skills further and use my technical knowledge to create innovative web applications. My goal is to be a va
-            luable development team member and continuously learn and grow as a web developer.
+            Web API built with
+            Node, Express, and ORM/MySQL for
+            the manufacturing of
+            garments that serve other
+            companies' needs.
             </p>
             <div className='btn_link'>
             <a href='https://ecommerce-arjelou.vercel.app/'>Demo</a>
-            <a href='https://github.com/arjelou/ecommerce'>Github</a>
+            <a href='https://github.com/arjelou/ecommercebackend'>Github</a>
             </div>
         </div>
         <div className='container cv_contactus'>
