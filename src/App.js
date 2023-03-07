@@ -1,5 +1,5 @@
 import {Routes, Route} from 'react-router-dom';
-import Index from './pages/home';
+import Index from './pages/index';
 import Language from './component/language';
 import Framework from './component/framework';
 import Tools from './component/tools';

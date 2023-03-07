@@ -1,13 +1,190 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+div.cv_upper{
+  background-image: url(./assets/bg.jpg );
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
 }
+div.cv_fullName{
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  color: #fff;
+}
+div.cv_hero{
+   margin: 0px auto;
+}
+div.cv_hero h2{
+  font-size: 70px;
+  margin-top: 120px;
+  color: #fff;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+}
+div.cv_hero p{
+  font-size: 30px;
+  color: #fff;
+}
+/*################ cv_content ################ */
+div.cv_content{
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+div.cv_content img{
+  width: 350px;
+  height: 350px;
+  grid-row: 1 / -1;
+  margin: 0px auto;
+}
+div.cv_content p{
+  grid-column: 2 / -1;
+  grid-row: 2;
+  margin: 0px auto;
+  padding: 20px;
+}
+div.cv_content ul{
+  grid-column: 2 / -1;
+  grid-row: 1;
+  list-style-type: none;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+div.cv_content li{
+  margin-top: 2rem;
+  display: flex;
+  background-color: rgb(0, 0, 0);
+  justify-content: center;
+  align-items: center;
+  padding: 5px 15px;
+  border-radius: 8px;
+  color: #fff;
+}
+/*################ cv_projectList ################ */
+div.skills_header{
+  margin-top: 160px;
+  margin-bottom: 100px;
+}
+div.skills_header h5{
+  font-size: 100px;
+  text-rendering: auto;
+  background-color: orangered;
+  height: 70px;
+  width: 160px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.cv_projectList{
+  margin-bottom: 100px;
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, .50fr);
+}
+.cv_projectList img{
+  width: 450px;
+  height: 450px;
+  grid-column: 2 / -1;
+  grid-row: 1 / -1;
+  margin: 0px auto;
+}
+.cv_projectList ul{
+  grid-column: 1 / 2;
+  grid-row: 1;
+  list-style-type: none;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+.cv_projectList li{
+  margin-top: 2rem;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.27);
+  justify-content: center;
+  align-items: center;
+  padding: 5px 15px;
+  border-radius: 8px;
+  color: #000000;
+}
+.cv_projectList p{
+  margin: 0px auto;
+  padding: 20px;
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  margin-top: 20px;
+}
+div.cv_projectList h3{
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  margin-left: 20px;
+  border-bottom: solid 1px red;
+}
+div.btn_link{
+  grid-column: 1 / 2;
+  grid-row: 3;
+  display: grid;
+  grid-template-columns: repeat(2, .25fr);
+  gap: 2rem;
+  padding: 15px;
+}
+div.btn_link a{
+  color: orangered;
+  font-weight: 700;
+  padding: 12px;
+  border: none;
+  box-shadow: 5px 7px 3px orangered;
+  text-decoration: none;
+  text-align: center;
+  border: solid 1px orangered;
+}
+div.btn_link a:hover{
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-color: orangered;
+  color: #fff;
+  box-shadow: none;
+}
+/*############ cv_contactus ################ */
+div.cv_contactus{
+  margin-top: 150px;
+}
+div.cv_contactus h4{
+  display: flex;
+  justify-content: center;
+  font-size: 100px;
+}
+div.links{
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin-bottom: 180px;
+  margin-top: 80px;
+}
+div.links a{
+  background-color: orangered;
+  padding: 20px;
+  text-decoration: none;
+  border: solid 1px orangered;
+  color: #fff;
+}
+div.links a:hover{
+  box-shadow: 5px 7px 3px orangered;
+  border: solid 1px orangered;
+  background-color: #fff;
+  color: orangered;
+  padding: 20px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+div.cv_contactus span{
+  background-color: orangered;
+  padding: 0px 10px;
+  color: #fff;
+}
+div.cv_contactus span:hover{
+  background-color: transparent;
+  color: #000000;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
 }
