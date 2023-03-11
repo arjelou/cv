@@ -4,8 +4,10 @@ import avatar from '../assets/avatar.png';
 import { motion } from "framer-motion";
 import bce from '../assets/bc.png';
 import fre from '../assets/fr.png';
+import { ContactUs } from '../component/Contact';
 
 const index = () => {
+    
 return (
 <>
     <div className='contaciner-fluid cv_upper'>
@@ -18,7 +20,7 @@ return (
             dragConstraints={{
             top: -150,
             left: -250,
-            right: 1180,
+            right: 350,
             bottom: 550,
             }}>
             HELLO' I'm Arjelou</motion.h2>
@@ -108,8 +110,10 @@ return (
     </div>
     <div className='container cv_contactus'>
         <h4>GET IN<span>TOUCH</span></h4>
+        <div>
+            <ContactUs />
+        </div>
         <div className='links'>
-            <a href="mailto:arjelou.jelou@gmail.com?subject=Mail from Portfolio website">arjelou.jelou@gmail.com</a>
             <a href="tel:+639763959021">(+63) 976-395-9021</a>
             <a href='https://www.google.com/maps/place/Davao+City,+Davao+del+Sur/@7.2532789,125.1708762,10z/data=!3m1!4b1!4m6!3m5!1s0x32f96d9f519e327f:0xb53a24589f79c573!8m2!3d7.190708!4d125.455341!16zL20vMDJnbjF4'>
             Davao City, 8000
@@ -121,4 +125,5 @@ return (
 }
 
 export default index;
+
 

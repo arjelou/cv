@@ -189,3 +189,52 @@ div.cv_contactus span:hover{
   -webkit-transition: 0.7s;
   transition: 0.7s;
 }
+
+/* ###### contactUS FORM ############ */
+div.contactUS form{
+  display: grid;
+  justify-content: center;
+  /* border: solid 1px red; */
+}
+div.contactUS p{
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+div.contactUS form input:after{
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border: solid 1px orangered;
+  background-color: #0b00e1;
+}
+div.contactUS form input{
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border: solid 1px orangered;
+  width: 450px;
+  margin-bottom: 1rem;
+  padding: 10px;
+  font-size: 1.2rem;
+}
+div.contactUS form label{
+  font-weight: 600;
+}
+div.contactUS form textarea{
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border: solid 1px orangered;
+  height: 130px;
+  margin-bottom: 1.5rem;
+  padding: 10px;
+  font-size: 1.2rem;
+}
+.btn_submit{
+  font-weight: 500;
+}
+.btn_submit:hover{
+  background-color: orangered;
+  color: #fff;
+}
+
