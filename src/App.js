@@ -4,9 +4,6 @@ import Language from './component/language';
 import Framework from './component/framework';
 import Tools from './component/tools';
 
-
-import './global.css';
-
 export default function App() {
   return (
   <>
