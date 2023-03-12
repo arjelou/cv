@@ -1,16 +1,19 @@
 import React from 'react';
 import '../index.css';
 import avatar from '../assets/avatar.png';
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import bce from '../assets/bc.png';
 import fre from '../assets/fr.png';
 import { ContactUs } from '../component/Contact';
 
-const index = () => {
-    
+
+
+export default function Index() {
+    let { scrollY } = useScroll();
+    let y = useTransform(scrollY,[0, 640],["0%", "50%"]);  
 return (
 <>
-    <div className='contaciner-fluid cv_upper'>
+    <div className='contaciner-fluid cv_upper' tyle={{y}}>
         <div className='cv_fullName'>
             <span className='mt-1'>Arjelou Carampatana</span>
         </div>
@@ -37,7 +40,10 @@ return (
         </div>
     </div>
     <div className='container cv_content'>
-        <img src={avatar} alt="avatar" />
+        <motion.img src={avatar} alt="avatar" 
+        whileHover={{scale:1.1}}
+
+        />
         <ul>
             <li>HTMLS</li>
             <li>CSS</li>
@@ -60,7 +66,9 @@ return (
         <h5>Projects</h5>
     </div>
     <div className='container cv_projectList'>
-        <img src={fre} alt="avatar" />
+        <motion.img src={fre} alt="avatar"
+        whileHover={{scale:1.1}}
+         />
         <ul>
             <li>HTML</li>
             <li>CSS</li>
@@ -84,7 +92,9 @@ return (
         </div>
     </div>
     <div className='container cv_projectList'>
-        <img src={bce} alt="avatar" />
+        <motion.img src={bce} alt="avatar" 
+        whileHover={{scale:1.1}}
+        />
         <ul>
             <li>ORM</li>
             <li>MySQL</li>
@@ -120,6 +130,6 @@ return (
 )
 }
 
-export default index;
+// export default index;
 
 
