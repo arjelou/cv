@@ -23,7 +23,7 @@ return (
             right: 350,
             bottom: 550,
             }}>
-            HELLO' I'm Arjelou</motion.h2>
+            Hai, I'm Arjelou</motion.h2>
             <motion.p
             drag
             dragConstraints={{
@@ -32,15 +32,11 @@ return (
             right: 1180,
             bottom: 550,
             }}>
-            Juior Full-stack Web Developer
+            Web Developer
             </motion.p>
         </div>
     </div>
-    <motion.div className='container cv_content'
-    initial={{ opacity: 0.50 }}
-    whileInView={{ opacity: 1 }}
-    viewport={{ once: true }}
-    >
+    <div className='container cv_content'>
         <img src={avatar} alt="avatar" />
         <ul>
             <li>HTMLS</li>
@@ -59,7 +55,7 @@ return (
             a valuable development team member and continuously learn and
             grow as a web developer.
         </p>  
-    </motion.div>
+    </div>
     <div className='container skills_header'>
         <h5>Projects</h5>
     </div>
@@ -83,8 +79,8 @@ return (
         companies' needs.
         </p>
         <div className='btn_link'>
-        <a href='https://ecommerce-arjelou.vercel.app/'>Demo</a>
-        <a href='https://github.com/arjelou/ecommerce'>Github</a>
+            <a href='https://ecommerce-arjelou.vercel.app/'>Demo</a>
+            <a href='https://github.com/arjelou/ecommerce'>Github</a>
         </div>
     </div>
     <div className='container cv_projectList'>
@@ -110,7 +106,7 @@ return (
     </div>
     <div className='container cv_contactus'>
         <h4>GET IN<span>TOUCH</span></h4>
-        <div>
+        <div className='contactUS'>
             <ContactUs />
         </div>
         <div className='links'>

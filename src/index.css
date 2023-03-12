@@ -14,16 +14,16 @@ div.cv_fullName{
   color: #fff;
 }
 div.cv_hero{
-   margin: 0px auto;
+    margin: 0px auto;
 }
 div.cv_hero h2{
-  font-size: 70px;
+  font-size: 90px;
   margin-top: 120px;
   color: #fff;
 
 }
 div.cv_hero p{
-  font-size: 30px;
+  font-size: 40px;
   color: #fff;
 }
 /*################ cv_content ################ */
@@ -237,4 +237,124 @@ div.contactUS form textarea{
   background-color: orangered;
   color: #fff;
 }
+@media screen and (max-width: 768px) {
+  div.cv_upper{
+    background-color: #0b00e1;
+    height: 45vh;
+    background: radial-gradient(circle, #0b00e1 10%, transparent 11%),radial-gradient(circle at bottom left, #0b00e1 5%, transparent 6%),radial-gradient(circle at bottom right, #0b00e1 5%, transparent 6%),radial-gradient(circle at top left, #0b00e1 5%, transparent 6%),radial-gradient(circle at top right, #0b00e1 5%, transparent 6%);
+    background-size: 3em 3em;
+    background-color: #161111;
+    background-attachment: fixed;
+    opacity: 1;
+  }
+  div.cv_fullName {
+    font-size: 12px;
+  }
+  div.cv_hero{
+    display: grid;
+    grid-template-columns: repeat(3, .50fr);
+  }
+  div.cv_hero h2{
+    grid-column: span 3;
+    font-size: 45px;
+    text-align: center;
+  }
+  div.cv_hero p{
+    font-size: 20px;
+    grid-column: span 3;
+    text-align: center;
 
+  }
+  /*############ cv_content ########### */
+  div.cv_content{
+    display: grid;
+    grid-template-columns: 10px 2fr 10px;
+    grid-template-rows: 1.1fr .50fr 1fr;
+  }
+  div.cv_content img{
+    grid-column: 2;
+    width: 250px;
+    height: 250px;
+  }
+  div.cv_content ul{
+    display: flex;
+    flex-direction: wra;
+    gap: 5px;
+    grid-column: 2;
+    grid-row: 2;
+  }
+  div.cv_content ul li{
+    background-color: orangered;
+  }
+  div.cv_content p{
+    grid-column: 2;
+    grid-row: 3;
+    text-align: center;
+  }
+  /*############### skills_header ########## */
+  div.skills_header h5{
+    font-size: 55px;
+  }
+  /* ######### cv_projectList ############ */
+  div.cv_projectList{
+    display: grid;
+    grid-template-columns: 10px 2fr 10px;
+    grid-template-rows: repeat(4, .50fr);
+  }
+  div.cv_projectList img{
+    grid-column: span 3;
+    grid-row: 1;
+    width: 250px;
+    height: 250px;
+
+  }
+  div.cv_projectList ul{
+    grid-column: 2;
+    grid-row: 2;
+  }
+  div.cv_projectList p, div.cv_projectList h3{
+    grid-column: 2;
+    grid-row: 3;
+  }
+  div.cv_projectList a{
+    grid-column: 2;
+    grid-row: 4;
+  }
+  div.btn_link{
+    grid-column: 2;
+    grid-row: 4;
+    display: flex;
+    height: 100px;
+    align-items: center;
+    padding: 0px 15px;
+  }
+  /* ############ cv_contactus ############### */
+  div.cv_contactus{
+    display: grid;
+    grid-template-columns: 10px 2fr 10px;
+    grid-template-rows: .25fr 1fr .15fr;
+  }
+  div.cv_contactus h4{
+    grid-column: span 3;
+    grid-row: 1 / 1;
+    font-size: 40px;
+    text-align: center;
+
+  }
+  div.contactUS{
+    grid-column: 2;
+    grid-row: 2 / 3;
+  }
+  div.contactUS form input{
+    width: 300px;
+  }
+  div.links{
+    grid-column: 2;
+    grid-row: 3;
+  }
+  div.links a{
+    font-size: 13px;
+    padding: 10px;
+  }
+  
+}
