@@ -4,6 +4,7 @@ import avatar from '../assets/avatar.png';
 import { motion, useScroll, useTransform } from "framer-motion";
 import bce from '../assets/bc.png';
 import fre from '../assets/fr.png';
+import sch from '../assets/acmadescheduler.png';
 import { ContactUs } from '../component/Contact';
 
 
@@ -42,7 +43,6 @@ return (
     <div className='container cv_content'>
         <motion.img src={avatar} alt="avatar" 
         whileHover={{scale:1.1}}
-
         />
         <ul>
             <li>HTMLS</li>
@@ -112,6 +112,26 @@ return (
         <div className='btn_link'>
         <a href='https://ecommerce-arjelou.vercel.app/'>Demo</a>
         <a href='https://github.com/arjelou/ecommercebackend'>Github</a>
+        </div>
+    </div>
+    <div className='container cv_projectList'>
+        <motion.img src={sch} alt="avatar" 
+        whileHover={{scale:1.1}}
+        />
+        <ul>
+            <li>React</li>
+            <li>Firestore</li>
+            <li>Authentication</li>
+            <li>Hosting</li>
+        </ul>
+        <h3>ACMADE Scheduler</h3>
+        <p>
+        Build with a serverless web applications and NoSQL document 
+        database enable to use google provider authentication.
+        </p>
+        <div className='btn_link'>
+        <a href='#'>Coming soon...</a>
+        <a href='#'>Coming soon...</a>
         </div>
     </div>
     <div className='container cv_contactus'>
