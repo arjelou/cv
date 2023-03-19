@@ -1,7 +1,7 @@
 import React from 'react';
 import '../index.css';
 import avatar from '../assets/avatar.png';
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import bce from '../assets/bc.png';
 import fre from '../assets/fr.png';
 import sch from '../assets/acmadescheduler.png';
@@ -10,23 +10,57 @@ import { ContactUs } from '../component/Contact';
 
 
 export default function Index() {
-    let { scrollY } = useScroll();
-    let y = useTransform(scrollY,[0, 640],["0%", "50%"]);  
+    const cardVariants = {
+        offscreen: {
+          y: '100vw'
+        },
+        onscreen: {
+          y: 0,
+          transition: {
+            type: "spring",
+            bounce: 0.2,
+            duration: 0.8
+          }
+        }
+    };
+
+    const profileVariants = {
+        offScreen: {
+          opacity: 0
+        },
+        onScreen: {
+          opacity: 1,
+          transition: {
+            type: "fade",
+            delay: 0.2,
+            duration: 0.8
+          }
+        }
+    };
+      
 return (
 <>
-    <div className='contaciner-fluid cv_upper' tyle={{y}}>
+    <motion.div className='contaciner-fluid cv_upper'
+        initial={{opacity: 0}}
+        animate={{opacity: 1}}
+        transition={{delay: .5, duration: .5}}
+        >
         <div className='cv_fullName'>
             <span className='mt-1'>Arjelou Carampatana</span>
         </div>
         <div className='container cv_hero'>
             <motion.h2
-            drag
+              drag
             dragConstraints={{
             top: -150,
             left: -250,
             right: 350,
             bottom: 550,
-            }}>
+            }}
+            initial={{y: '-100vw'}}
+            animate={{y: 0}}
+            transition={{delay: .10, type: 'spring'}}
+            >
             Hai, I'm Arjelou</motion.h2>
             <motion.p
             drag
@@ -35,16 +69,27 @@ return (
             left: -250,
             right: 1180,
             bottom: 550,
-            }}>
+            }}
+            initial={{y: '100vw'}}
+            animate={{y: 0}}
+            transition={{delay: .10, duration: 1, type: 'spring'}}
+            >
             Web Developer
             </motion.p>
         </div>
-    </div>
-    <div className='container cv_content'>
+    </motion.div>
+    <motion.div className='container cv_content'
+        initial='offScreen'
+        whileInView='onScreen'
+        viewport={{once: true, amount: 0.8}}
+        >
         <motion.img src={avatar} alt="avatar" 
         whileHover={{scale:1.1}}
+        variants={profileVariants}
         />
-        <ul>
+        <motion.ul
+        variants={profileVariants}
+        >
             <li>HTMLS</li>
             <li>CSS</li>
             <li>JavaScript</li>
@@ -54,22 +99,29 @@ return (
             <li>React</li>
             <li>Node</li>
             <li>Bootstrap</li>
-        </ul>
-        <p> 
+        </motion.ul>
+        <motion.p
+        variants={profileVariants}
+        > 
             As a career shifter from IT Support to web development, I am determined to develop my skills
             further and use my technical knowledge to create innovative web applications. My goal is to be
             a valuable development team member and continuously learn and
             grow as a web developer.
-        </p>  
-    </div>
+        </motion.p>  
+    </motion.div>
     <div className='container skills_header'>
         <h5>Projects</h5>
     </div>
-    <div className='container cv_projectList'>
+    <motion.div className='container cv_projectList'
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, amount: 0.8 }}
+      >
         <motion.img src={fre} alt="avatar"
         whileHover={{scale:1.1}}
+        variants={cardVariants}
          />
-        <ul>
+        <motion.ul>
             <li>HTML</li>
             <li>CSS</li>
             <li>JavaScript</li>
@@ -77,7 +129,7 @@ return (
             <li>Bootstrap</li>
             <li>Vercel</li>
             <li>Formik</li>
-        </ul>
+        </motion.ul>
         <h3>B2B eCommerce</h3>
         <p>
         Web app built with React,
@@ -90,10 +142,15 @@ return (
             <a href='https://ecommerce-arjelou.vercel.app/'>Demo</a>
             <a href='https://github.com/arjelou/ecommerce'>Github</a>
         </div>
-    </div>
-    <div className='container cv_projectList'>
+    </motion.div>
+    <motion.div className='container cv_projectList'
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, amount: 0.8 }}
+      >
         <motion.img src={bce} alt="avatar" 
         whileHover={{scale:1.1}}
+        variants={cardVariants}
         />
         <ul>
             <li>ORM</li>
@@ -113,10 +170,15 @@ return (
         <a href='https://ecommerce-arjelou.vercel.app/'>Demo</a>
         <a href='https://github.com/arjelou/ecommercebackend'>Github</a>
         </div>
-    </div>
-    <div className='container cv_projectList'>
+    </motion.div>
+    <motion.div className='container cv_projectList'
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, amount: 0.8 }}
+      >
         <motion.img src={sch} alt="avatar" 
         whileHover={{scale:1.1}}
+        variants={cardVariants}
         />
         <ul>
             <li>React</li>
@@ -130,10 +192,10 @@ return (
         database enable to use google provider authentication.
         </p>
         <div className='btn_link'>
-        <a href='#'>Coming soon...</a>
-        <a href='#'>Coming soon...</a>
+        <a href='.'>Coming soon...</a>
+        <a href='.'>Coming soon...</a>
         </div>
-    </div>
+    </motion.div>
     <div className='container cv_contactus'>
         <h4>GET IN<span>TOUCH</span></h4>
         <div className='contactUS'>
