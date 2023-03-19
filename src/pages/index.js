@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../index.css';
 import avatar from '../assets/avatar.png';
 import { motion } from "framer-motion";
@@ -7,9 +7,17 @@ import fre from '../assets/fr.png';
 import sch from '../assets/acmadescheduler.png';
 import { ContactUs } from '../component/Contact';
 
-
-
 export default function Index() {
+
+    //Modla timer
+    const [closenModal, setOpenModal] = useState(false);
+
+    useEffect(() =>{
+        setTimeout(() =>{
+            setOpenModal(true)
+        }, 5000)
+    },[])
+
     const cardVariants = {
         offscreen: {
           y: '100vw'
@@ -40,6 +48,21 @@ export default function Index() {
       
 return (
 <>
+    <div>
+        {
+        closenModal && (
+        <>
+        <motion.div className='openToWork container-fluid' initial={{y: -250}} animate={{y: 0}}
+            transition={{delay: 0.5, duration: .5, type: 'spring'}}
+            >
+            <p>Open to work</p>
+            <button onClick={() => setOpenModal(false)}>x</button>
+            <motion.button whileHover={{scale: 1.1}} whileTap={{scale: 1.2}}><a href="mailto:arjelou.jelou@gmail.com">HIRE ME</a></motion.button>
+        </motion.div>
+        </>
+        )
+        }
+    </div>
     <motion.div className='contaciner-fluid cv_upper'
         initial={{opacity: 0}}
         animate={{opacity: 1}}
@@ -62,6 +85,9 @@ return (
             transition={{delay: .10, type: 'spring'}}
             >
             Hai, I'm Arjelou</motion.h2>
+            <div>
+              
+            </div>
             <motion.p
             drag
             dragConstraints={{

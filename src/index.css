@@ -237,6 +237,44 @@ div.contactUS form textarea{
   background-color: orangered;
   color: #fff;
 }
+
+/* openToWork */
+div.openToWork{
+  position:fixed;
+  background-color: rgba(24, 0, 241, 0.95);
+  display: grid;
+  grid-template-columns: repeat(10, .10fr);
+  grid-template-rows: repeat(2, 15px);
+  padding: 10px;
+  z-index: 1;
+}
+div.openToWork p{
+ color: #fff;
+ grid-column: span 3;
+ grid-row: 1 / -1 ;
+}
+div.openToWork a{
+  text-decoration: none;
+  color: #fff;
+}
+div.openToWork button:nth-child(3){
+  grid-column: 5 / 7;
+  grid-row: 1 / -1;
+  border: solid 1px orangered;
+  background-color: transparent;
+  color: #fff;
+}
+div.openToWork button:nth-child(2){
+  grid-column: 10;
+  grid-row: 1;
+  background-color: transparent;
+  color: aliceblue;
+  border-radius: 50%;
+  font-weight: bold;
+  border-style: none;
+  font-size: 12px;
+  font-family: sans-serif;
+}
 @media screen and (max-width: 768px) {
   div.cv_upper{
     background-color: #0b00e1;
@@ -356,5 +394,4 @@ div.contactUS form textarea{
     font-size: 13px;
     padding: 10px;
   }
-  
 }
