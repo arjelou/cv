@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Data from '../data/data.json';
 import '../index.css';
 import avatar from '../assets/avatar.png';
 import { motion } from "framer-motion";
@@ -138,90 +139,40 @@ return (
     <div className='container skills_header'>
         <h5>Projects</h5>
     </div>
-    <motion.div className='container cv_projectList'
-      initial="offscreen"
-      whileInView="onscreen"
-      viewport={{ once: true, amount: 0.8 }}
-      >
-        <motion.img src={fre} alt="avatar"
-        whileHover={{scale:1.1}}
-        variants={cardVariants}
-         />
-        <motion.ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>React</li>
-            <li>Bootstrap</li>
-            <li>Vercel</li>
-            <li>Formik</li>
-        </motion.ul>
-        <h3>B2B eCommerce</h3>
-        <p>
-        Web app built with React,
-        Node, Express, and MySQL for
-        the manufacturing of
-        garments that serve other
-        companies' needs.
-        </p>
-        <div className='btn_link'>
-            <a href='https://ecommerce-arjelou.vercel.app/'>Demo</a>
-            <a href='https://github.com/arjelou/ecommerce'>Github</a>
-        </div>
-    </motion.div>
-    <motion.div className='container cv_projectList'
-      initial="offscreen"
-      whileInView="onscreen"
-      viewport={{ once: true, amount: 0.8 }}
-      >
-        <motion.img src={bce} alt="avatar" 
-        whileHover={{scale:1.1}}
-        variants={cardVariants}
-        />
-        <ul>
-            <li>ORM</li>
-            <li>MySQL</li>
-            <li>Node</li>
-            <li>Express</li>
-        </ul>
-        <h3>B2B eCommerce Back End</h3>
-        <p>
-        Web API built with
-        Node, Express, and ORM/MySQL for
-        the manufacturing of
-        garments that serve other
-        companies' needs.
-        </p>
-        <div className='btn_link'>
-        <a href='https://ecommerce-arjelou.vercel.app/'>Demo</a>
-        <a href='https://github.com/arjelou/ecommercebackend'>Github</a>
-        </div>
-    </motion.div>
-    <motion.div className='container cv_projectList'
-      initial="offscreen"
-      whileInView="onscreen"
-      viewport={{ once: true, amount: 0.8 }}
-      >
-        <motion.img src={sch} alt="avatar" 
-        whileHover={{scale:1.1}}
-        variants={cardVariants}
-        />
-        <ul>
-            <li>React</li>
-            <li>Firestore</li>
-            <li>Authentication</li>
-            <li>Hosting</li>
-        </ul>
-        <h3>ACMADE Scheduler</h3>
-        <p>
-        Build with a serverless web applications and NoSQL document 
-        database enable to use google provider authentication.
-        </p>
-        <div className='btn_link'>
-        <a href='.'>Coming soon...</a>
-        <a href='.'>Coming soon...</a>
-        </div>
-    </motion.div>
+    {
+        Data.map(data => {
+            return(
+                <motion.div className='container cv_projectList'
+                initial="offscreen"
+                whileInView="onscreen"
+                viewport={{ once: true, amount: 0.8 }}
+                >
+                    <motion.img src={data.link_url} alt="avatar"
+                    whileHover={{scale:1.1}}
+                    variants={cardVariants}
+                    />
+                    <motion.ul>
+                        <li>{data.tools[0]}</li>
+                        <li>{data.tools[1]}</li>
+                        <li>{data.tools[2]}</li>
+                        <li>{data.tools[3]}</li>
+                        <li>{data.tools[4]}</li>
+                        <li>{data.tools[5]}</li>
+                    </motion.ul>
+                    <h3>{data.title}</h3>
+                    <p>
+                    {data.description}
+                    </p>
+                    <div className='btn_link'>
+                        <a href={data.link_demo_url}>{data.link_demo_url === '' ? 'Coming soon...' : 'Demo'}</a>
+                        <a href={data.link_frontend_url}>{data.link_frontend_url === '' ? 'Coming soon...' : 'Github'}</a>
+                        <a href={data.link_backend_url}>{data.link_backend_url === '' ? 'Coming soon...' : 'Github'}</a>
+                    </div>
+                </motion.div>
+            )
+        }
+        )
+    }
     <div className='container cv_contactus'>
         <h4>GET IN<span>TOUCH</span></h4>
         <div className='contactUS'>
@@ -238,6 +189,5 @@ return (
 )
 }
 
-// export default index;
 
 
