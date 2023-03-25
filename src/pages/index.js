@@ -3,9 +3,6 @@ import Data from '../data/data.json';
 import '../index.css';
 import avatar from '../assets/avatar.png';
 import { motion } from "framer-motion";
-import bce from '../assets/bc.png';
-import fre from '../assets/fr.png';
-import sch from '../assets/acmadescheduler.png';
 import { ContactUs } from '../component/Contact';
 
 export default function Index() {
