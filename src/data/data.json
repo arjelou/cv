@@ -29,7 +29,7 @@
       ],
       "link_url":"https://www.simplilearn.com/ice9/free_resources_article_thumb/How_to_Become_a_Back_End_Developer.jpg",
       "description": "A simple chat application in realtime communication using a MERN tech stack.",
-      "link_demo_url":"https://github.com/arjelou/ecommerce", 
+      "link_demo_url":"https://chatapp-arjelou.vercel.app/", 
       "link_frontend_url":"https://github.com/arjelou/chatappclient.git", 
       "link_backend_url":"https://github.com/arjelou/chatappserver.git"
     },
