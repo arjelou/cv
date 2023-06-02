@@ -29,6 +29,7 @@ export const ContactUs = () => {
               console.log(error.text);
           });
       };
+    }
 
   return (
     <div className='contactUS'>
