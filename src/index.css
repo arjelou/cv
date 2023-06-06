@@ -17,13 +17,13 @@ div.cv_hero{
     margin: 0px auto;
 }
 div.cv_hero h2{
-  font-size: 90px;
+  font-size: 50px;
   margin-top: 120px;
   color: #fff;
 
 }
 div.cv_hero p{
-  font-size: 40px;
+  font-size: 25px;
   color: #fff;
 }
 /*################ cv_content ################ */
@@ -41,17 +41,19 @@ div.cv_content img{
 }
 div.cv_content p{
   grid-column: 2 / -1;
-  grid-row: 2;
+  grid-row: 1 / -1;
   margin: 0px auto;
   padding: 20px;
 }
 div.cv_content ul{
   grid-column: 2 / -1;
-  grid-row: 1;
+  grid-row: 3;
   list-style-type: none;
   display: flex;
-  gap: 5px;
+  gap: 2px;
   flex-wrap: wrap;
+  margin-top: 40px;
+  margin: 0px auto;
 }
 div.cv_content li{
   margin-top: 2rem;
@@ -298,10 +300,15 @@ div.openToWork button:nth-child(2){
     text-align: center;
   }
   div.cv_hero p{
-    font-size: 20px;
+    font-size: 35px;
     grid-column: span 3;
     text-align: center;
-
+  }
+  div.callToAction h6{
+    font-size: 105px;
+    /* grid-column: span 3; */
+    text-align: center;
+    color:red;
   }
   /*############ cv_content ########### */
   div.cv_content{

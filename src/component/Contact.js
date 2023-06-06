@@ -26,8 +26,7 @@ export const ContactUs = () => {
         });
       };
   return (
-    <div className='contactUS'>
-    <p>arjelou.jelou@gmail.com</p>
+    <div className='contactUS'><br/>
     <ToastContainer />
     <form ref={form} onSubmit={sendEmail}>
       <label>Name</label>

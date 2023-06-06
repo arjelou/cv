@@ -4,10 +4,11 @@ import '../index.css';
 import avatar from '../assets/avatar.png';
 import { motion } from "framer-motion";
 import { ContactUs } from '../component/Contact';
+import { AiOutlineMail, AiOutlinePhone } from "react-icons/ai";
 
 export default function Index() {
 
-    //Modla timer
+    //Modal timer
     const [closenModal, setOpenModal] = useState(false);
 
     useEffect(() =>{
@@ -53,7 +54,7 @@ return (
         <motion.div className='openToWork container-fluid' initial={{y: -250}} animate={{y: 0}}
             transition={{delay: 0.5, duration: .5, type: 'spring'}}
             >
-            <p>Open to work</p>
+            <p>Open to working as a junior Back End Developer</p>
             <button onClick={() => setOpenModal(false)}>x</button>
             <motion.button whileHover={{scale: 1.1}} whileTap={{scale: 1.2}}><a href="mailto:arjelou.jelou@gmail.com">HIRE ME</a></motion.button>
         </motion.div>
@@ -67,11 +68,11 @@ return (
         transition={{delay: .5, duration: .5}}
         >
         <div className='cv_fullName'>
-            <span className='mt-1'>Arjelou Carampatana</span>
+            <span className='mt-1'></span>
         </div>
         <div className='container cv_hero'>
             <motion.h2
-              drag
+            drag
             dragConstraints={{
             top: -150,
             left: -250,
@@ -82,7 +83,7 @@ return (
             animate={{y: 0}}
             transition={{delay: .10, type: 'spring'}}
             >
-            Hai, I'm Arjelou</motion.h2>
+            Hi, <br/>I'm Arjelou Carampatana</motion.h2>
             <div>
               
             </div>
@@ -98,39 +99,46 @@ return (
             animate={{y: 0}}
             transition={{delay: .10, duration: 1, type: 'spring'}}
             >
-            Web Developer
+            Full Stack Web Developer
             </motion.p>
+            <div>
+                <motion.p className='callToAction'
+                initial={{y: '100vw'}}
+                animate={{y: 0}}
+                transition={{delay: .60, duration: 1}}> 
+                    <AiOutlineMail size={30} color='white' title='Email' /> arjelou.jelou@gmail.com
+                </motion.p>
+                <motion.p className='callToAction'
+                initial={{y: '100vw'}}
+                animate={{y: 0}}
+                transition={{delay: .70, duration: 1}}> 
+                    <AiOutlinePhone size={30} color='white' title='Phone' /> +63 976 395 9021
+                </motion.p>
+            </div>
         </div>
+       
     </motion.div>
-    <motion.div className='container cv_content'
-        initial='offScreen'
-        whileInView='onScreen'
-        viewport={{once: true, amount: 0.8}}
-        >
-        <motion.img src={avatar} alt="avatar" 
-        whileHover={{scale:1.1}}
-        variants={profileVariants}
-        />
-        <motion.ul
-        variants={profileVariants}
-        >
-            <li>HTMLS</li>
-            <li>CSS</li>
+    <motion.div className='container cv_content' initial='offScreen' whileInView='onScreen' viewport={{once: true, amount: 0.8}}>
+        <motion.img src={avatar} alt="avatar" whileHover={{scale:1.1}} variants={profileVariants}/>
+        <motion.ul variants={profileVariants}>
+            <li>HTML5/CSS</li>
             <li>JavaScript</li>
-            <li>ORM</li>
+            <li>MongoDB</li>
             <li>MySQL</li>
             <li>Express</li>
             <li>React</li>
             <li>Node</li>
-            <li>Bootstrap</li>
         </motion.ul>
         <motion.p
         variants={profileVariants}
         > 
-            As a career shifter from IT Support to web development, I am determined to develop my skills
-            further and use my technical knowledge to create innovative web applications. My goal is to be
-            a valuable development team member and continuously learn and
-            grow as a web developer.
+        I am a career shifter who transitioned from IT Support to becoming a Full Stack Web Developer. With 5 years of experience in IT Support, 
+        I bring valuable problem-solving skills to my development work. I have hands-on experience in React.js, Node.js, Express.js, MongoDB, MySQL, and 
+        I am actively learning new technologies such as CI/CD with Docker and AWS. My passion for continuous learning and adaptability make me a dedicated and versatile developer.
+            <br /><br /> 
+        I am a Full Stack Web Developer with a background in IT Support. With expertise in React.js, Node.js, Express.js, MongoDB, and MySQL, 
+        I bring a unique perspective and problem-solving skills to my development work. I am currently expanding my knowledge in CI/CD with Docker and AWS. 
+        I am passionate about continuous learning and excited to contribute to innovative and user-friendly applications. Let's discuss how I can add value to your team or project.
         </motion.p>  
     </motion.div>
     <div className='container skills_header'>
