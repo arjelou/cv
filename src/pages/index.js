@@ -138,7 +138,7 @@ return (
             <br /><br /> 
         I am a Full Stack Web Developer with a background in IT Support. With expertise in React.js, Node.js, Express.js, MongoDB, and MySQL, 
         I bring a unique perspective and problem-solving skills to my development work. I am currently expanding my knowledge in CI/CD with Docker and AWS. 
-        I am passionate about continuous learning and excited to contribute to innovative and user-friendly applications. Let's discuss how I can add value to your team or project.
+        I am passionate about continuous learning and excited to contribute to innovative and user-friendly applications.
         </motion.p>  
     </motion.div>
     <div className='container skills_header'>
