@@ -1,7 +1,7 @@
 [
     {
       "id": 1,
-      "title": "B2B Gre' eCommerce",
+      "title": "B2B Garments eCommerce",
       "tools": [
         "HTML", 
         "CSS", 
@@ -11,7 +11,7 @@
         "Node"
       ],
       "link_url":"https://www.simplilearn.com/ice9/free_resources_article_thumb/full_front_back.jpg",
-      "description": "A full-stack web application to help our organization manage client/customer inquiries and serve better services and enhancement of our garments manufacturing production by using their feedback.",
+      "description": "A web application to help our organization manage client/customer inquiries and serve better services and enhancement our garments manufacturing production by using their feedback.Features: Administrator Dashboard | Managing user's account | Create, edit, and remove product listing | Create a list of categories | Receive all inquiries and feedback on each product item list. Customer Dashboard | Customer can signup and login | Browse all product listings and request a quotation | Can send feedback. Tech stack: React, Node, Express, MySQL, CSS, BootStrap, ORM.",
       "link_demo_url":"https://ecommerce-arjelou.vercel.app/", 
       "link_frontend_url":"https://github.com/arjelou/ecommerce", 
       "link_backend_url":"https://github.com/arjelou/ecommercebackend.git"
@@ -28,7 +28,7 @@
         "Node"
       ],
       "link_url":"https://magsige.com/wp-content/uploads/2023/06/ChatApp.png",
-      "description": "A simple chat application in realtime communication using a MERN tech stack.",
+      "description": "A chat web application in real-time communication. Features: user can signup and log in | and send messages to others. Tech stack: React, Node, MySQL, BootStrap, CSS.",
       "link_demo_url":"https://chatapp-arjelou.vercel.app/", 
       "link_frontend_url":"https://github.com/arjelou/chatappclient.git", 
       "link_backend_url":"https://github.com/arjelou/chatappserver.git"
