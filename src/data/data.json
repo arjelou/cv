@@ -1,6 +1,25 @@
 [
-    {
+  {
       "id": 1,
+      "title": "EveMasy",
+      "tools": [
+        "HTML", 
+        "TAILWIND CSS", 
+        "MongoDB", 
+        "Express", 
+        "React",
+        "Node",
+        "DOCKER",
+        "AWS"
+      ],
+      "link_url":"https://www.shutterstock.com/image-vector/vector-page-concept-site-under-260nw-1439529038.jpg",
+      "description": "Event Management is a web-based application designed to streamline the process of organizing and managing events, users can Create, Read, Update, and Delete (CRUD operation) events and view other users' publications events, and an administrator dashboard for managing users and events lists. Tech stack: MongoDB, Express, React, Node, Docker, AWS.",
+      "link_demo_url":"#", 
+      "link_frontend_url":"#", 
+      "link_backend_url":"https://github.com/arjelou/evemasy.git"
+    },
+    {
+      "id": 2,
       "title": "B2B Garments eCommerce",
       "tools": [
         "HTML", 
@@ -17,7 +36,7 @@
       "link_backend_url":"https://github.com/arjelou/ecommercebackend.git"
     },
     {
-      "id": 2,
+      "id": 3,
       "title": "Chat Application",
       "tools": [
         "HTML", 
@@ -34,7 +53,7 @@
       "link_backend_url":"https://github.com/arjelou/chatappserver.git"
     },
     {
-      "id": 3,
+      "id": 4,
       "title": "ACMADE Scheduler",
       "tools": [
         "HTML", 
