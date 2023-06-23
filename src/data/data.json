@@ -12,7 +12,7 @@
         "DOCKER",
         "AWS"
       ],
-      "link_url":"https://www.shutterstock.com/image-vector/vector-page-concept-site-under-260nw-1439529038.jpg",
+      "link_url":"https://us.123rf.com/450wm/isovector/isovector2012/isovector201200085/161120445-vector-page-concept-of-site-under-construction-with-isometric-illustration-of-linear-minimalistic.jpg?ver=6",
       "description": "Event Management is a web-based application designed to streamline the process of organizing and managing events, users can Create, Read, Update, and Delete (CRUD operation) events and view other users' publications events, and an administrator dashboard for managing users and events lists. Tech stack: MongoDB, Express, React, Node, Docker, AWS.",
       "link_demo_url":"#", 
       "link_frontend_url":"#", 
